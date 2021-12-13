@@ -2,6 +2,14 @@
 
 <?= $this->section("content"); ?>
     <div class="container-fluid">
+        <?php if ($error_message != null) { ?>
+            <div class="row">
+                <div class="col-4 offset-4">
+                    <div class="alert alert-primary" role="alert"><?= $error_message; ?></div>
+                </div>
+            </div>
+        <?php } ?>
+
         <form action="/user/login" method="post">
             <div class="row">
                 <div class="col-4 mb-4 offset-4">

@@ -8,15 +8,18 @@ class User extends BaseController
 {
     public function login()
     {
+        $session = session();
+
+        if ($session->get("user_id") != null) {
+            return redirect()->to("/product/index", null, "get");
+        }
+
         if ($this->request->getMethod() == "get") {
-            $data = [
+            return view("user/login", [
                 "title" => "Login",
-            ];
-
-            return view("user/login", $data);
+                "error_message" => $session->getFlashdata("error_message"),
+            ]);
         } else if ($this->request->getMethod() == "post") {
-            $session = session();
-
             $userModel = new UserModel();
             $username = $this->request->getVar("username");
             $password = hash( "sha256", $this->request->getVar("password"));
