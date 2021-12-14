@@ -23,7 +23,27 @@ class Product extends BaseController
         }
 
         return view("product/index", [
-            "product" => $this->productModel->findAll(),
+            "title" => "Product",
+            "products" => $this->productModel->findAll(),
         ]);
+    }
+
+    public function create()
+    {
+        $session = session();
+
+        if ($session->get("user_id") == null) {
+            $session->setFlashdata("error_message", "You have to login first.");
+            return redirect()->to("/user/login", null, "get");
+        }
+
+        if ($this->request->getMethod() == "get") {
+            return view("product/create", [
+                "title" => "Create Product",
+                "error_message" => $session->getFlashdata("error_message"),
+            ]);
+        } else if ($this->request->getMethod() == "post") {
+
+        }
     }
 }

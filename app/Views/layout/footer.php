@@ -1,0 +1,1 @@
+<div class="fixed-bottom text-center p-3 bg-white border border-dark">2019 © PT Majoo Teknologi Indonesia</div>
