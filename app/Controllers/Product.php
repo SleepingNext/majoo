@@ -6,7 +6,7 @@ use App\Models\ProductModel;
 
 class Product extends BaseController
 {
-    protected productModel;
+    protected $productModel;
 
     public function __construct()
     {
@@ -22,7 +22,7 @@ class Product extends BaseController
             return redirect()->to("/user/login", null, "get");
         }
 
-        return view("product", [
+        return view("product/index", [
             "product" => $this->productModel->findAll(),
         ]);
     }

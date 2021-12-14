@@ -4,9 +4,9 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class ProductModel extends Model
+class UserModel extends Model
 {
-    protected $table = "product";
-    protected $allowedFields = ["name", "price", "image", "category", "created_by"];
+    protected $table = "user";
+    protected $allowedFields = ["username", "password", "last_login"];
     protected $useTimestamps = true;
 }

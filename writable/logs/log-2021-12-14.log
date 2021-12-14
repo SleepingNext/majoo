@@ -1,0 +1,39 @@
+CRITICAL - 2021-12-14 10:26:04 --> syntax error, unexpected token ";", expecting variable
+#0 D:\xampp\htdocs\majoo\system\Router\Router.php(176): CodeIgniter\Router\Router->autoRoute('product/index')
+#1 D:\xampp\htdocs\majoo\system\CodeIgniter.php(718): CodeIgniter\Router\Router->handle('product/index')
+#2 D:\xampp\htdocs\majoo\system\CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\xampp\htdocs\majoo\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\majoo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\xampp\htdocs\majoo\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-12-14 10:27:28 --> Class "App\Models\ProductModel" not found
+#0 D:\xampp\htdocs\majoo\system\CodeIgniter.php(801): App\Controllers\Product->__construct()
+#1 D:\xampp\htdocs\majoo\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#2 D:\xampp\htdocs\majoo\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\xampp\htdocs\majoo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\xampp\htdocs\majoo\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2021-12-14 10:27:39 --> Class "App\Models\ProductModel" not found
+#0 D:\xampp\htdocs\majoo\system\CodeIgniter.php(801): App\Controllers\Product->__construct()
+#1 D:\xampp\htdocs\majoo\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#2 D:\xampp\htdocs\majoo\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\xampp\htdocs\majoo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\xampp\htdocs\majoo\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2021-12-14 10:27:48 --> Class "App\Models\ProductModel" not found
+#0 D:\xampp\htdocs\majoo\system\CodeIgniter.php(801): App\Controllers\Product->__construct()
+#1 D:\xampp\htdocs\majoo\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#2 D:\xampp\htdocs\majoo\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\xampp\htdocs\majoo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\xampp\htdocs\majoo\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2021-12-14 10:29:09 --> Invalid file: product.php
+#0 D:\xampp\htdocs\majoo\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('product.php')
+#1 D:\xampp\htdocs\majoo\system\Common.php(1097): CodeIgniter\View\View->render('product', Array, true)
+#2 D:\xampp\htdocs\majoo\app\Controllers\Product.php(26): view('product', Array)
+#3 D:\xampp\htdocs\majoo\system\CodeIgniter.php(824): App\Controllers\Product->index()
+#4 D:\xampp\htdocs\majoo\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#5 D:\xampp\htdocs\majoo\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\majoo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\majoo\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
