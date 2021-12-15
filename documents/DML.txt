@@ -1,0 +1,5 @@
+select * from users where username = $username;
+
+select * from products;
+
+insert into products(name, description, price, image, category, created_by, created_at, updated_at) values ($name, $description, $price, $image, $category, $created_by, $created_at, $updated_at);

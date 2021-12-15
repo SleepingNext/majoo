@@ -50,9 +50,4 @@ class User extends BaseController
             }
         }
     }
-
-    public function logout()
-    {
-        session()->remove(["user_id", "username"]);
-    }
 }
