@@ -200,3 +200,31 @@ CRITICAL - 2021-12-14 19:04:19 --> move_uploaded_file(http://localhost:8080/img/
 #7 {main}
 ERROR - 2021-12-14 19:37:34 --> Cannot add or update a child row: a foreign key constraint fails (`majoo`.`product`, CONSTRAINT `product_ibfk_2` FOREIGN KEY (`created_by`) REFERENCES `user` (`id`))
 ERROR - 2021-12-14 19:43:33 --> Duplicate entry 'Test' for key 'name'
+CRITICAL - 2021-12-14 21:00:26 --> syntax error, unexpected token "if"
+#0 D:\xampp\htdocs\majoo\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\xampp\\htdocs...')
+#1 D:\xampp\htdocs\majoo\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 D:\xampp\htdocs\majoo\system\CodeIgniter.php(789): class_exists('\\App\\Controller...', true)
+#4 D:\xampp\htdocs\majoo\system\CodeIgniter.php(397): CodeIgniter\CodeIgniter->startController()
+#5 D:\xampp\htdocs\majoo\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\majoo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\majoo\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2021-12-14 21:01:14 --> Call to a member function listErrors() on null
+#0 D:\xampp\htdocs\majoo\system\View\View.php(214): include()
+#1 D:\xampp\htdocs\majoo\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\xampp\htdocs\majoo\system\Common.php(1097): CodeIgniter\View\View->render('product/create', Array, true)
+#3 D:\xampp\htdocs\majoo\app\Controllers\Product.php(50): view('product/create', Array)
+#4 D:\xampp\htdocs\majoo\system\CodeIgniter.php(824): App\Controllers\Product->create()
+#5 D:\xampp\htdocs\majoo\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#6 D:\xampp\htdocs\majoo\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\xampp\htdocs\majoo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\xampp\htdocs\majoo\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-12-14 21:04:26 --> Call to undefined method CodeIgniter\Session\Session::set_flashdata()
+#0 D:\xampp\htdocs\majoo\system\CodeIgniter.php(824): App\Controllers\Product->create()
+#1 D:\xampp\htdocs\majoo\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#2 D:\xampp\htdocs\majoo\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\xampp\htdocs\majoo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\xampp\htdocs\majoo\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#5 {main}

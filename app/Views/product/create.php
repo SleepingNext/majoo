@@ -2,10 +2,16 @@
 
 <?= $this->section("content"); ?>
 <div class="container-fluid">
+    <?php if ($validation != null) : ?>
+        <div class="col-4 offset-4">
+            <div class="alert alert-danger" role="alert"><?= $validation->listErrors(); ?></div>
+        </div>
+    <?php endif; ?>
+
     <?php if ($error_message != null) : ?>
         <div class="row">
             <div class="col-4 offset-4">
-                <div class="alert alert-dange" role="alert"><?= $error_message; ?></div>
+                <div class="alert alert-danger" role="alert"><?= $error_message; ?></div>
             </div>
         </div>
     <?php endif; ?>
@@ -23,7 +29,8 @@
             <div class="col-4 mb-4 offset-4">
                 <label for="description-tinymce" class="form-label">Description</label>
                 <div class="input-group">
-                    <textarea class="form-control form-control-lg" id="description-tinymce" name="description" style="width: 100%;"></textarea>
+                    <textarea class="form-control form-control-lg" id="description-tinymce" name="description"
+                              style="width: 100%;"></textarea>
                 </div>
             </div>
         </div>
@@ -50,7 +57,7 @@
                 <div class="input-group">
                     <select class="form-select form-select-lg" id="category" name="category">
                         <option selected>Select a category</option>
-                        <?php foreach($product_categories as $product_category): ?>
+                        <?php foreach ($product_categories as $product_category): ?>
                             <option value="<?= $product_category["id"]; ?>"><?= $product_category["name"]; ?></option>
                         <?php endforeach; ?>
                     </select>

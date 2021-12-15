@@ -47,8 +47,24 @@ class Product extends BaseController
                 "title" => "Create Product",
                 "product_categories" => $this->productCategoryModel->findAll(),
                 "error_message" => $session->getFlashdata("error_message"),
+                "validation" => $session->getFlashdata("validation"),
             ]);
         } else if ($this->request->getMethod() == "post") {
+            helper(['form', 'url']);
+
+            $rules = [
+                "name" => 'required|is_unique[product.name]',
+                "description" => 'required',
+                "price" => 'required',
+                "image" => 'required',
+                "category" => 'required',
+            ];
+
+            if (!$this->validate($rules)) {
+                $session->setFlashdata("validation", $this->validator);
+                return redirect()->to("/product/create", null, "get");
+            }
+
             $requestData = $this->request->getVar();
 
             try {
