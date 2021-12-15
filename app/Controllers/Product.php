@@ -28,14 +28,16 @@ class Product extends BaseController
         return view("product/index", [
             "title" => "Product",
             "products" => $this->productModel->findAll(),
+            "success_message" => $session->getFlashdata("success_message"),
         ]);
     }
 
     public function create()
     {
         $session = session();
+        $user_id = $session->get("user_id");
 
-        if ($session->get("user_id") == null) {
+        if ($user_id == null) {
             $session->setFlashdata("error_message", "You have to login first.");
             return redirect()->to("/user/login", null, "get");
         }
@@ -47,12 +49,36 @@ class Product extends BaseController
                 "error_message" => $session->getFlashdata("error_message"),
             ]);
         } else if ($this->request->getMethod() == "post") {
+            $requestData = $this->request->getVar();
 
+            try {
+                $this->productModel->save([
+                    "name" => $requestData["name"],
+                    "description" => $requestData["description"],
+                    "price" => $requestData["price"],
+                    "image" => $requestData["image"],
+                    "category" => $requestData["category"],
+                    "created_by" => $user_id,
+                ]);
+
+                $session->setFlashdata("success_message", "Successfully created a product.");
+                return redirect()->to("/product/index", null, "get");
+            } catch (\Exception $e) {
+                $session->setFlashdata("error_message", $e);
+                return redirect()->to("/product/create", null, "get");
+            }
         }
     }
 
     public function upload()
     {
+        $session = session();
+
+        if ($session->get("user_id") == null) {
+            $session->setFlashdata("error_message", "You have to login first.");
+            return redirect()->to("/user/login", null, "get");
+        }
+
         $file_name = $_FILES['image']['name'];
         $tmp_name = $_FILES['image']['tmp_name'];
         move_uploaded_file($tmp_name, $_SERVER['DOCUMENT_ROOT'] . "/img/" . $file_name);

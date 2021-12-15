@@ -5,7 +5,7 @@
         <?php if ($error_message != null) : ?>
             <div class="row">
                 <div class="col-4 offset-4">
-                    <div class="alert alert-primary" role="alert"><?= $error_message; ?></div>
+                    <div class="alert alert-danger" role="alert"><?= $error_message; ?></div>
                 </div>
             </div>
         <?php endif; ?>

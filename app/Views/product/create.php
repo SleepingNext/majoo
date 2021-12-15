@@ -5,7 +5,7 @@
     <?php if ($error_message != null) : ?>
         <div class="row">
             <div class="col-4 offset-4">
-                <div class="alert alert-primary" role="alert"><?= $error_message; ?></div>
+                <div class="alert alert-dange" role="alert"><?= $error_message; ?></div>
             </div>
         </div>
     <?php endif; ?>
@@ -48,7 +48,7 @@
             <div class="col-4 mb-4 offset-4">
                 <label for="image" class="form-label">Category</label>
                 <div class="input-group">
-                    <select class="form-select form-select-lg" id="category">
+                    <select class="form-select form-select-lg" id="category" name="category">
                         <option selected>Select a category</option>
                         <?php foreach($product_categories as $product_category): ?>
                             <option value="<?= $product_category["id"]; ?>"><?= $product_category["name"]; ?></option>

@@ -2,18 +2,26 @@
 
 <?= $this->section("content"); ?>
     <div class="container-fluid">
+        <?php if ($success_message != null) : ?>
+            <div class="row">
+                <div class="col">
+                    <div class="alert alert-success" role="alert"><?= $success_message; ?></div>
+                </div>
+            </div>
+        <?php endif; ?>
+
         <div class="row">
             <div class="col">
-                <h1 class="p-4">Produk</h1>
+                <h1 class="pt-4 px-4">Produk</h1>
             </div>
             <div class="col" style="text-align: right;">
                 <a href="/product/create" class="btn m-4 btn-white border-dark"><i class="fas fa-plus"></i></a>
             </div>
         </div>
 
-        <div class="row px-4">
+        <div class="row px-4" style="margin-bottom: 5%">
             <?php foreach ($products as $product) : ?>
-                <div class="col-3">
+                <div class="col-3 my-3">
                     <div class="card border-dark" style="height: 100%">
                         <img src="/img/<?= $product["image"]; ?>" class="card-img-top" alt="<?= $product["name"]; ?>">
                         <div class="card-body mb-4">

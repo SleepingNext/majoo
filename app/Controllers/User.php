@@ -6,6 +6,13 @@ use App\Models\UserModel;
 
 class User extends BaseController
 {
+    protected $userModel;
+
+    public function __construct()
+    {
+        $this->userModel = new UserModel();
+    }
+
     public function login()
     {
         $session = session();
@@ -20,11 +27,10 @@ class User extends BaseController
                 "error_message" => $session->getFlashdata("error_message"),
             ]);
         } else if ($this->request->getMethod() == "post") {
-            $userModel = new UserModel();
             $username = $this->request->getVar("username");
             $password = hash( "sha256", $this->request->getVar("password"));
 
-            $data = $userModel->where("username", $username)->first();
+            $data = $this->userModel->where("username", $username)->first();
 
             if (isset($data)) {
                 if ($data["password"] == $password) {

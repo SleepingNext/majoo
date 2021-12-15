@@ -198,3 +198,5 @@ CRITICAL - 2021-12-14 19:04:19 --> move_uploaded_file(http://localhost:8080/img/
 #5 D:\xampp\htdocs\majoo\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #6 D:\xampp\htdocs\majoo\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
 #7 {main}
+ERROR - 2021-12-14 19:37:34 --> Cannot add or update a child row: a foreign key constraint fails (`majoo`.`product`, CONSTRAINT `product_ibfk_2` FOREIGN KEY (`created_by`) REFERENCES `user` (`id`))
+ERROR - 2021-12-14 19:43:33 --> Duplicate entry 'Test' for key 'name'
