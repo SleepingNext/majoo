@@ -133,3 +133,68 @@ CRITICAL - 2021-12-14 11:47:03 --> Invalid file: product/create.php
 #6 D:\xampp\htdocs\majoo\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #7 D:\xampp\htdocs\majoo\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
 #8 {main}
+CRITICAL - 2021-12-14 12:04:12 --> syntax error, unexpected token ")"
+#0 D:\xampp\htdocs\majoo\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 D:\xampp\htdocs\majoo\system\Common.php(1097): CodeIgniter\View\View->render('product/create', Array, true)
+#2 D:\xampp\htdocs\majoo\app\Controllers\Product.php(46): view('product/create', Array)
+#3 D:\xampp\htdocs\majoo\system\CodeIgniter.php(824): App\Controllers\Product->create()
+#4 D:\xampp\htdocs\majoo\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#5 D:\xampp\htdocs\majoo\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\majoo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\majoo\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2021-12-14 17:59:47 --> Invalid file: layout/template_base.php
+#0 D:\xampp\htdocs\majoo\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout/template...')
+#1 D:\xampp\htdocs\majoo\system\View\View.php(230): CodeIgniter\View\View->render('layout/template...', Array, true)
+#2 D:\xampp\htdocs\majoo\system\Common.php(1097): CodeIgniter\View\View->render('user/login', Array, true)
+#3 D:\xampp\htdocs\majoo\app\Controllers\User.php(20): view('user/login', Array)
+#4 D:\xampp\htdocs\majoo\system\CodeIgniter.php(824): App\Controllers\User->login()
+#5 D:\xampp\htdocs\majoo\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 D:\xampp\htdocs\majoo\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\xampp\htdocs\majoo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\xampp\htdocs\majoo\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-12-14 18:54:58 --> Array to string conversion
+#0 D:\xampp\htdocs\majoo\app\Controllers\Product.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'D:\\xampp\\htdocs...', 56)
+#1 D:\xampp\htdocs\majoo\system\CodeIgniter.php(824): App\Controllers\Product->upload()
+#2 D:\xampp\htdocs\majoo\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#3 D:\xampp\htdocs\majoo\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\majoo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\xampp\htdocs\majoo\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-12-14 18:55:20 --> syntax error, unexpected variable "$this"
+#0 D:\xampp\htdocs\majoo\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\xampp\\htdocs...')
+#1 D:\xampp\htdocs\majoo\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 D:\xampp\htdocs\majoo\system\CodeIgniter.php(789): class_exists('\\App\\Controller...', true)
+#4 D:\xampp\htdocs\majoo\system\CodeIgniter.php(397): CodeIgniter\CodeIgniter->startController()
+#5 D:\xampp\htdocs\majoo\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\majoo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\majoo\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2021-12-14 19:01:34 --> Undefined array key "file"
+#0 D:\xampp\htdocs\majoo\app\Controllers\Product.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\xampp\\htdocs...', 56)
+#1 D:\xampp\htdocs\majoo\system\CodeIgniter.php(824): App\Controllers\Product->upload()
+#2 D:\xampp\htdocs\majoo\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#3 D:\xampp\htdocs\majoo\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\majoo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\xampp\htdocs\majoo\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-12-14 19:01:58 --> move_uploaded_file(/img/test.png): Failed to open stream: No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'move_uploaded_f...', 'D:\\xampp\\htdocs...', 58)
+#1 D:\xampp\htdocs\majoo\app\Controllers\Product.php(58): move_uploaded_file('D:\\xampp\\tmp\\ph...', '/img/test.png')
+#2 D:\xampp\htdocs\majoo\system\CodeIgniter.php(824): App\Controllers\Product->upload()
+#3 D:\xampp\htdocs\majoo\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#4 D:\xampp\htdocs\majoo\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\xampp\htdocs\majoo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\xampp\htdocs\majoo\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2021-12-14 19:04:19 --> move_uploaded_file(http://localhost:8080/img/test.png): Failed to open stream: HTTP wrapper does not support writeable connections
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'move_uploaded_f...', 'D:\\xampp\\htdocs...', 58)
+#1 D:\xampp\htdocs\majoo\app\Controllers\Product.php(58): move_uploaded_file('D:\\xampp\\tmp\\ph...', 'http://localhos...')
+#2 D:\xampp\htdocs\majoo\system\CodeIgniter.php(824): App\Controllers\Product->upload()
+#3 D:\xampp\htdocs\majoo\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#4 D:\xampp\htdocs\majoo\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\xampp\htdocs\majoo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\xampp\htdocs\majoo\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#7 {main}

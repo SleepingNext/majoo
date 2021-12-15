@@ -33,6 +33,10 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/user/login', 'User::login');
 $routes->post('/user/login', 'User::login');
+$routes->get('/product/index', 'Product::index');
+$routes->get('/product/create', 'Product::create');
+$routes->post('/product/create', 'Product::create');
+$routes->post('/product/upload', 'Product::upload');
 
 /*
  * --------------------------------------------------------------------
